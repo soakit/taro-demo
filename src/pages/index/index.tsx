@@ -1,5 +1,5 @@
 /* eslint-disable jsx-quotes */
-import { Component } from "react";
+import React, { Component } from "react";
 import { View, ScrollView, Image, Text } from "@tarojs/components";
 import "./index.less";
 
