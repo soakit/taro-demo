@@ -14,6 +14,7 @@ export default class Index extends Component {
   render() {
     return (
       <View className="components-page">
+        Taro v 3.4.1
         <View>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ullam
           error, exercitationem non cupiditate placeat. Voluptates quia ratione
