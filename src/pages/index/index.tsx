@@ -164,26 +164,28 @@ export default class Index extends Component {
           </View>
         </View>
         <View>
-          {type === 2 ? <View>子分类</View> : null}
-          <ScrollView
-            style="width: 100%; height: 500px;"
-            scrollY
-            refresherEnabled
-            refresherTriggered={triggered}
-            onRefresherRefresh={this.onRefresh.bind(this)}
-            onRefresherAbort={this.onAbort}
-          >
-            {arr.map((item) => (
-              <View className="scroll-item">
-                <Image
-                  mode="widthFix"
-                  style={{ width: 100, height: 100 }}
-                  src={item.src}
-                />
-                <Text>{item.num}</Text>
-              </View>
-            ))}
-          </ScrollView>
+          {type === 2 ? <View className="sub-type">子分类</View> : null}
+          <View style="width: 100%; height: 500px; overflow: hidden;">
+            <ScrollView
+              style="width: 100%; height: 500px;"
+              scrollY
+              refresherEnabled
+              refresherTriggered={triggered}
+              onRefresherRefresh={this.onRefresh.bind(this)}
+              onRefresherAbort={this.onAbort}
+            >
+              {arr.map((item) => (
+                <View className="scroll-item">
+                  <Image
+                    mode="widthFix"
+                    style={{ width: 100, height: 100 }}
+                    src={item.src}
+                  />
+                  <Text>{item.num}</Text>
+                </View>
+              ))}
+            </ScrollView>
+          </View>
         </View>
       </View>
     );
